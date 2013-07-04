@@ -46,4 +46,27 @@ describe User do
 
   end    
 
+  context "when a user authenticates" do
+    before :each do
+      @user = User.create(name: 'Test', email: 'test@example.com', password: 'abcd')
+    end
+
+    context "with correct credentials" do
+
+      it "should return the matching user" do
+        User.authenticate(@user.email, @user.password).should eq(@user)
+      end
+
+    end
+
+    context "with incorrect credentials" do
+
+      it "should return nil" do
+        User.authenticate('e','p').should be_nil
+      end
+
+    end
+
+  end
+
 end
