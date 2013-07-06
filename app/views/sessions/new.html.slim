@@ -1,0 +1,10 @@
+p= flash[:alert]
+h1= 'Log in'
+= form_tag sessions_path do
+  div
+    = label_tag :email
+    = text_field_tag :email, params[:email]
+  div
+    = label_tag :password
+    = password_field_tag :password
+  = submit_tag "Log in"

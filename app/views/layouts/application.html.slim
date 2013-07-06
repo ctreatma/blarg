@@ -1,0 +1,12 @@
+doctype html
+html lang='en-US'
+  head
+    title= 'Blarg'
+    = csrf_meta_tag
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+  body
+    #header
+      h1= link_to 'Home', root_path
+    #content
+      = yield
