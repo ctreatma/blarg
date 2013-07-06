@@ -1,12 +1,13 @@
 doctype html
 html lang='en-US'
   head
-    title= 'Blarg'
+    title= "#{@author.name} - Blog"
     = csrf_meta_tag
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
   body
-    #header
-      h1= link_to 'Home', root_path
+    header
+      h1= link_to @author.name, root_url
+      =link_to 'About', @author.about_url if @author.about_url
     #content
       = yield

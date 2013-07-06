@@ -3,7 +3,8 @@ require 'bcrypt'
 class User < ActiveRecord::Base
   attr_accessor :password
 
-  validates_presence_of :name, :password, :email
+  validates_presence_of :name, :email
+  validates_presence_of :password, :on => :create
 
   before_save :encrypt_password
 
