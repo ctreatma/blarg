@@ -1,0 +1,12 @@
+= form_for post do |f|
+  - if post.errors.any?
+    .error
+      | Please fix the following errors:
+      ul
+        - post.errors.full_messages.each do |msg|
+          li= msg
+  #post-title
+    =f.text_field :title, placeholder: 'Title'
+  #post-content
+    =f.text_area :content, placeholder: 'Content'
+  = f.submit 'Save'
