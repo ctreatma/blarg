@@ -4,4 +4,4 @@ article.post
   time= post.created_at.to_date.to_s(:long_ordinal)
   - if include_content
     .post-content
-      = post.content
+      = sanitize Kramdown::Document.new(post.content).to_html
