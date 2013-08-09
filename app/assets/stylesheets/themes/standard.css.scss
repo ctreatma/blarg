@@ -26,4 +26,16 @@ header {
   h2 {
     margin: .75em 0 .25em 0;
   }
+
+  pre, code {
+    background-color: #eee;
+    border: 1px solid #bbb;
+    padding: 5px;
+  }
+
+  pre code {
+    background-color: none;
+    border: none;
+    padding: 0;
+  }
 }
