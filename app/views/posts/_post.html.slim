@@ -1,6 +1,6 @@
 article.post
   h2
-    = link_to post.title, post
+    = link_to post.title, post.slug
   time= post.created_at.to_date.to_s(:long_ordinal)
   - if include_content
     .post-content
