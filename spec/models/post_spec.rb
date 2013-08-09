@@ -27,6 +27,11 @@ describe Post do
       @p.errors.should have_key :content
     end
 
+    it "should generate a slug from the title" do
+      @p.title = "Title of post"
+      @p.save
+      @p.slug.should be_eql @p.title.to_url
+    end
   end
 
 end
