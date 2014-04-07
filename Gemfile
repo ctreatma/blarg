@@ -4,7 +4,6 @@ gem 'rails', '4.0.0'
 gem 'bcrypt-ruby'
 gem 'stringex'
 gem 'kramdown'
-gem 'sqlite3'
 gem 'puma'
 
 gem 'slim-rails'
@@ -16,6 +15,7 @@ gem 'turbolinks'
 gem 'figaro'
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'simplecov'
@@ -23,3 +23,8 @@ group :development, :test do
 end
 
 gem 'capybara', group: :test
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
