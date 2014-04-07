@@ -1,0 +1,2 @@
+google:
+  tracking_id: <%= ENV['blarg_tracking_id'] %>
