@@ -17,3 +17,6 @@
 
 # Ignore Passenger config
 /public/.htaccess
+
+# Ignore application configuration
+/config/application.yml
