@@ -1,0 +1,13 @@
+AllCops:
+  Exclude:
+    - 'config/initializers/settings.rb'
+    - 'db/schema.rb'
+
+AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+Documentation:
+  Enabled: false
+
+GuardClause:
+  Enabled: false

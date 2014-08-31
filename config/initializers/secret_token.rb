@@ -11,7 +11,7 @@
 # if you're sharing your code publicly.
 secret = ENV['BLARG_SECRET']
 if secret.nil? || secret.length < 30
-  raise 'Missing or unsuitable secret key'
+  fail 'Missing or unsuitable secret key'
 else
   Blarg::Application.config.secret_key_base = secret
 end
