@@ -32,6 +32,27 @@ describe Post do
       @p.save
       @p.slug.should be_eql @p.title.to_url
     end
+
+    it 'should not be published' do
+      @p.published_at.should be_nil
+      @p.should_not be_published
+    end
   end
 
+  context 'when a post is published' do
+    before :each do
+      @frozen_time = Time.now
+      Time.stub(:now).and_return(@frozen_time)
+      @p = Post.new
+      @p.publish
+    end
+
+    it 'should have a published_at date' do
+      @p.published_at.should be == @frozen_time
+    end
+
+    it 'should return true for #published?' do
+      @p.should be_published
+    end
+  end
 end
