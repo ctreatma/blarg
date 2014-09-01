@@ -6,7 +6,7 @@ require 'rspec/autorun'
 require 'simplecov'
 
 SimpleCov.start 'rails'
-SimpleCov.minimum_coverage 80.6
+SimpleCov.minimum_coverage 85.14
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
