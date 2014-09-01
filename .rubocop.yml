@@ -2,6 +2,7 @@ AllCops:
   Exclude:
     - 'config/initializers/settings.rb'
     - 'db/schema.rb'
+    - 'vendor/bundle/**/*'
 
 AccessModifierIndentation:
   EnforcedStyle: outdent
