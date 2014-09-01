@@ -1,9 +1,12 @@
-require 'rubocop/rake_task'
 
-Rake::Task[:default].prerequisites.clear
+if %w(development test).include? Rails.env
+  require 'rubocop/rake_task'
 
-task default: [:rubocop, :spec]
+  Rake::Task[:default].prerequisites.clear
 
-task :rubocop do
-  RuboCop::RakeTask.new
+  task default: [:rubocop, :spec]
+
+  task :rubocop do
+    RuboCop::RakeTask.new
+  end
 end
