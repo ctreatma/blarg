@@ -1,0 +1,44 @@
+
+$purple: #421C52;
+$fuschia: #732C7B;
+$violet: #9C8AA5;
+$violet_blue: #BDAEC6;
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+a {
+  color: $purple;
+
+  &:visited {
+    color: $violet_blue;
+  }
+
+  &:hover {
+    color: $violet;
+  }
+
+  &:active {
+    color: $violet_blue;
+  }
+}
+
+.menubar {
+  .pure-menu-open {
+    background-color: $purple;
+  }
+
+  .pure-menu-heading {
+    color: #FFF;
+    font-size: 110%;
+  }
+}
+
+.content-main {
+  margin: 10px auto 0;
+}

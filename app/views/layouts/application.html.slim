@@ -2,15 +2,20 @@ doctype html
 html lang='en-US'
   head
     title= "#{@author.name} - Blog"
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
     = csrf_meta_tag
+    = stylesheet_link_tag 'http://yui.yahooapis.com/pure/0.5.0/pure-min.css'
+    = stylesheet_link_tag 'http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css'
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
   body
-    header
-      h1= link_to @author.name, root_url
+    header.menubar
+      .pure-menu.pure-menu-open.pure-menu-horizontal.pure-menu-fixed
+        =link_to @author.name, root_url, class: 'pure-menu-heading'
       =link_to 'About', @author.about_url if @author.about_url
-    #content
-      = yield
+    .content-wrapper.pure-g
+      section.content-main.pure-u-1.pure-u-md-4-5
+        = yield
     javascript:
       var _gaq=[['_setAccount','#{SETTINGS['google']['tracking_id']}'],['_trackPageview']];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
