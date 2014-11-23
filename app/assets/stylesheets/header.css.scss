@@ -1,0 +1,18 @@
+.menubar {
+  .pure-menu-open {
+    background-color: $purple;
+  }
+
+  .pure-menu-heading {
+    color: #FFF;
+    font-size: 110%;
+  }
+
+  .social-links {
+    float: right;
+
+    a:hover {
+      background: none;
+    }
+  }
+}

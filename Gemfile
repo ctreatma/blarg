@@ -21,3 +21,5 @@ group :development, :test do
   gem 'simplecov'
   gem 'rubocop'
 end
+
+gem 'capybara', group: :test

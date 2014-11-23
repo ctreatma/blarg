@@ -1,4 +1,3 @@
-
 $purple: #421C52;
 $fuschia: #732C7B;
 $violet: #9C8AA5;
@@ -28,15 +27,13 @@ a {
   }
 }
 
-.menubar {
-  .pure-menu-open {
-    background-color: $purple;
-  }
-
-  .pure-menu-heading {
-    color: #FFF;
-    font-size: 110%;
-  }
+.accessibly-hidden {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
 }
 
 .content-main {

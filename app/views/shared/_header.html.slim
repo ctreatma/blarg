@@ -1,0 +1,9 @@
+header.menubar
+  .pure-menu.pure-menu-open.pure-menu-horizontal.pure-menu-fixed
+    = link_to @author.name, root_url, class: 'pure-menu-heading'
+    ul.social-links
+      - @author.social_links.each do |social_link|
+        li
+          = link_to social_link.url, class: "fa fa-#{social_link.site.dasherize}"
+            span.accessibly-hidden
+              = social_link.site

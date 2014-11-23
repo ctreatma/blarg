@@ -6,13 +6,11 @@ html lang='en-US'
     = csrf_meta_tag
     = stylesheet_link_tag 'http://yui.yahooapis.com/pure/0.5.0/pure-min.css'
     = stylesheet_link_tag 'http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css'
+    = stylesheet_link_tag 'http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
   body
-    header.menubar
-      .pure-menu.pure-menu-open.pure-menu-horizontal.pure-menu-fixed
-        =link_to @author.name, root_url, class: 'pure-menu-heading'
-      =link_to 'About', @author.about_url if @author.about_url
+    = render 'shared/header'
     .content-wrapper.pure-g
       section.content-main.pure-u-1.pure-u-md-4-5
         = yield

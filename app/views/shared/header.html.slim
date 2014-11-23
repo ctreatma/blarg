@@ -1,0 +1,5 @@
+header.menubar
+  .pure-menu.pure-menu-open.pure-menu-horizontal.pure-menu-fixed
+    =link_to @author.name, root_url, class: 'pure-menu-heading'
+    ul.social_links
+      =link_to('github', "http://github.com/#{@author.github_id}", class: 'github')
