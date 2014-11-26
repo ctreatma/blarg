@@ -3,6 +3,8 @@ require 'bcrypt'
 class User < ActiveRecord::Base
   attr_accessor :password
 
+  has_many :social_links
+
   validates_presence_of :name, :email
   validates_presence_of :password, on: :create
 

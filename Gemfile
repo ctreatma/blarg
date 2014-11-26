@@ -17,6 +17,7 @@ gem 'figaro'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
   gem 'simplecov'
   gem 'rubocop'
 end
