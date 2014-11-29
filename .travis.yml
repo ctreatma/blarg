@@ -4,3 +4,15 @@ rvm:
 env:
   global:
     secure: jeeLWN7+io36p0qyxqb6zO9Dv5T1U14cmONYsPYAa0nuS9iD2D9knwl3tLcA1opOsg/6ZMTpL+ZLVGHoYvLT6q7CPt0R61jwj5lZDkf+zzQO57+tukHFm4r/qJFJ4pnIjwr0f1piFSIoA8nOLjyzjWSdSjSsIS3DEvdxOGt9J60=
+deploy:
+  provider: heroku
+  api_key:
+    master:
+      secure: P1RB0ixE0P9u2/hihpEm2AgQFXLlJXvoNBiLd9wLQLrA6bOWPbkwuMSGv0+G0z+U0E2Bh8j7uTG1mv5mEKWI6uIIj2GEV8yf0R7NFf1xB8pI5+XJzIGcWzhd7sIyK/Z5xzSU0QqpaZ/zDrlJXBjIUrqOD+clI7GBGTucH6umTg0=
+    develop:
+      secure: oGapwWL9e/6kVhzzOVjcOaxKatNXIjf3xByDp8JT4qhSchGf+VDjuq9XtIEdKDnMb4nLIkj1dNStc9RRX2s2H3rgyr9NnicRKuB3V19N3Itsnrz9kZrvXSFcLtIuJNdSwNuoaYrq6hDBUcvOWAcbfeeJRdi4GgyrySqEsabwdU8=
+  app:
+    master: evening-depths-8967
+    develop: staging-blarg
+  run:
+    - rake db:migrate
