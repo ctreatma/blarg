@@ -4,11 +4,15 @@ $violet: #9C8AA5;
 $violet_blue: #BDAEC6;
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Montserrat", serif;
+}
+
+code {
+  font-family: monospace;
 }
 
 a {
