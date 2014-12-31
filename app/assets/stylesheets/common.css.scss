@@ -3,12 +3,16 @@ $fuschia: #732C7B;
 $violet: #9C8AA5;
 $violet_blue: #BDAEC6;
 
-body {
-  font-family: Helvetica, Arial, sans-serif;
+body, .pure-g [class *= "pure-u"] {
+  font-family: "Open Sans", sans-serif;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", serif;
+  }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia, "Times New Roman", serif;
+code {
+  font-family: monospace;
 }
 
 a {

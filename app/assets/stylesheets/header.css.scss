@@ -1,10 +1,14 @@
 .menubar {
   .pure-menu-open {
-    background-color: $purple;
+    background: linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,1));
+
+    &.pure-menu-fixed {
+      border: none;
+    }
   }
 
   .pure-menu-heading {
-    color: #FFF;
+    color: $purple;
     font-size: 110%;
   }
 
